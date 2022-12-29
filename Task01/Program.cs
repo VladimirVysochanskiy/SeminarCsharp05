@@ -1,26 +1,17 @@
 ﻿//Задайте массив из 12 элементов, заполненный случайными числами из промежутка
 //[-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
 
-int[] newArray = RandArray(12, -9, 9);
-int[] minMax = SumOfPositiveAndNegativeItems(newArray);
-
-System.Console.WriteLine(string.Join(" | ", newArray));
-System.Console.WriteLine($"Сумма отрицательных чисел: {minMax[0]}");
-System.Console.WriteLine($"Сумма положительных чисел: {minMax[1]}");
-
-
-//---------------------------------------------------------------------------
 //Метод подсчёта сумм отрицательных и положительных элементов 1D массива.
-int[] SumOfPositiveAndNegativeItems(int[] array)
+void SumOfPositiveAndNegativeItems(int[] array, out int sumN, out int sumP)
 {
-    int[] totals = new int[2];
+    sumN = 0;
+    sumP = 0;
 
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] < 0) totals[0] += array[i];
-        else totals[1] += array[i];
+        if (array[i] < 0) sumN += array[i];
+        else sumP += array[i];
     }
-    return totals;
 }
 
 //метод создание и рандомное наполнение int массива (заданной длины, числами от, и до)
@@ -35,7 +26,7 @@ int[] RandArray(int length, int fromNum, int toNum)
 }
 
 //Метод контроля ввода числа.
-int InputNumberControl(string text)
+/*int InputNumberControl(string text)
 {
     System.Console.Write(text);
     int number;
@@ -50,3 +41,11 @@ int InputNumberControl(string text)
     }  
     return number;
 }
+*/
+
+int[] newArray = RandArray(12, -9, 9);
+SumOfPositiveAndNegativeItems(newArray, out int sumNegative, out int sumPozitive);
+
+System.Console.WriteLine(string.Join(" | ", newArray));
+System.Console.WriteLine($"Сумма отрицательных чисел: {sumNegative}");
+System.Console.WriteLine($"Сумма положительных чисел: {sumPozitive}");
