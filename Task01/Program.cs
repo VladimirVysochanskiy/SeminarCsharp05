@@ -1,6 +1,7 @@
 ﻿//Задайте массив из 12 элементов, заполненный случайными числами из промежутка
 //[-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
 
+//---------------------------------------------------------------------------
 //Метод подсчёта сумм отрицательных и положительных элементов 1D массива.
 void SumOfPositiveAndNegativeItems(int[] array, out int sumN, out int sumP)
 {
@@ -44,8 +45,8 @@ int[] RandArray(int length, int fromNum, int toNum)
 */
 
 int[] newArray = RandArray(12, -9, 9);
-SumOfPositiveAndNegativeItems(newArray, out int sumNegative, out int sumPozitive);
+SumOfPositiveAndNegativeItems(newArray, out int sumNegative, out int sumPositive);
 
 System.Console.WriteLine(string.Join(" | ", newArray));
 System.Console.WriteLine($"Сумма отрицательных чисел: {sumNegative}");
-System.Console.WriteLine($"Сумма положительных чисел: {sumPozitive}");
+System.Console.WriteLine($"Сумма положительных чисел: {sumPositive}");
