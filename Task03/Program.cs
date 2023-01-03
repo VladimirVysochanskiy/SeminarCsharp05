@@ -9,8 +9,8 @@
 [1 2 3 4 5] -> 5 8 3
 [6 7 3 6] -> 36 21 */
 
-const int LENGTH = 9;
-const int FROMNUM = 0;
+const int LENGTH = 20;
+const int FROMNUM = -10;
 const int TONUM = 10;
 
 Console.Clear();
