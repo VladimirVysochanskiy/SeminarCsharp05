@@ -33,7 +33,7 @@ void FindNumber(int[] array, int number)
     }
     System.Console.WriteLine(find);
 }
-
+/*
 int InputNumberControl(string text)
 {
     System.Console.Write(text);
@@ -49,7 +49,7 @@ int InputNumberControl(string text)
     }  
     return number;
 }
-
+*/
 
 int[] arr = RandArray(15, -20, 20);
 System.Console.WriteLine(string.Join(" | ", arr));
