@@ -11,7 +11,7 @@ const int TONUM = 20;
 int[] myarray = RandArray(ARRLENGTH, FROMNUM, TONUM);
 Console.WriteLine(string.Join(" | ", myarray));
 System.Console.WriteLine();
-Console.WriteLine($"Сумма элементов с нечетными индексами = {SumEvenIndex1DArr(myarray)}");
+Console.WriteLine($"Сумма элементов с нечетными индексами = {SumOddIndex1DArr(myarray)}");
 
 //метод создание и рандомное наполнение int массива (заданной длины, числами от, и до)
 int[] RandArray(int length, int fromNum, int toNum)
@@ -24,7 +24,7 @@ int[] RandArray(int length, int fromNum, int toNum)
     return array;
 }
 
-int SumEvenIndex1DArr(int[] array)
+int SumOddIndex1DArr(int[] array)
 {
     int count = 0;
     for (int i = 1; i < array.Length; i += 2)
