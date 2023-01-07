@@ -19,7 +19,7 @@ System.Console.WriteLine($"Разница между максимальным и
 
 
 
-//Mетод Cоздание и рандомное наполнение 1D double массива
+//Mетод Создание и рандомное наполнение 1D double массива
 double[] RandArray(int length, int fromNum, int toNum)
 {
     double[] array = new double[length];
